@@ -18,16 +18,16 @@
 # $(call inherit-product, device/sample/products/backup_overlay.mk)
 
 # Get the long list of APNs
-PRODUCT_COPY_FILES := vendor/du/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
+PRODUCT_COPY_FILES := vendor/venture/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/du/config/common.mk)
-$(call inherit-product, vendor/du/config/gsm.mk)
+$(call inherit-product, vendor/venture/config/common.mk)
+$(call inherit-product, vendor/venture/config/gsm.mk)
 
-PRODUCT_NAME := du_shamu
+PRODUCT_NAME := venture_shamu
 PRODUCT_DEVICE := shamu
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 6
