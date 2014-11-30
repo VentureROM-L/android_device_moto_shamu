@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
-** Copyright 2014, The Android Open Source Project
+** Copyright 2013, The Android Open Source Project
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -17,11 +17,13 @@
 */
 -->
 
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<!-- These resources are around just to allow their values to be customized
+     for different hardware and product builds. -->
+<resources>
 
-    <string-array translatable="false" name="config_mobile_hotspot_provision_app">
-        <item>com.motorola.entitlement</item>
-        <item>com.motorola.entitlement.EntitlementDialogActivity</item>
-    </string-array>
+    <!-- XXXXX NOTE THE FOLLOWING RESOURCES USE THE WRONG NAMING CONVENTION.
+         Please don't copy them, copy anything else. -->
+    <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
+    <bool name="config_cellBroadcastAppLinks">false</bool>
 
 </resources>

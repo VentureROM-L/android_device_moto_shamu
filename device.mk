@@ -19,16 +19,11 @@
 #
 # Everything in this directory will become public
 
-
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/moto/shamu-kernel/zImage-dtb
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
-
-PRODUCT_COPY_FILES := \
-    $(LOCAL_KERNEL):kernel
+# Kernel inline
+TARGET_KERNEL_SOURCE := kernel/moto/shamu
+TARGET_KERNEL_CONFIG := shamu_defconfig
+TARGET_VARIANT_CONFIG := shamu_defconfig
+TARGET_SELINUX_CONFIG := shamu_defconfig
 
 PRODUCT_COPY_FILES += \
     device/moto/shamu/init.shamu.rc:root/init.shamu.rc \
@@ -214,7 +209,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.apm_sim_not_pwdn=1
+    persist.radio.apm_sim_not_pwdn=1 \
+    persist.radio.no_wait_for_card=1
 
 #Disable QC Oem Hook
 PRODUCT_PROPERTY_OVERRIDES += \
