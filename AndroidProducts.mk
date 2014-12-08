@@ -16,4 +16,4 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_shamu.mk \
-    $(LOCAL_DIR)/venture_shamu.mk
+    $(LOCAL_DIR)/venture.mk

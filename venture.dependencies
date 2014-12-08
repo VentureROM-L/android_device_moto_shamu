@@ -1,2 +1,12 @@
 [
+    {
+        "repository": "VentureROM-L/android_kernel_moto_shamu",
+        "target_path": "kernel/moto/shamu",
+        "branch": "lollipop"
+    },
+    {
+        "repository": "VentureROM-L/android_vendor_motorola",
+        "target_path": "vendor/motorola",
+        "branch": "lollipop"
+    }
 ]
